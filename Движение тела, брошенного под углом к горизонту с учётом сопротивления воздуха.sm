@@ -1,0 +1,715 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Studio настольная" version="1.2.9018.0"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="96">
+    <identity>
+      <id>df19eb6c-77b3-4ab7-bb37-53f7cc83567a</id>
+      <revision>83</revision>
+    </identity>
+    <metadata lang="rus">
+      <author>Вячеслав Мезенцев</author>
+    </metadata>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <mixedNumbers>false</mixedNumbers>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>0</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="false" viewMode="2" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true" hideElementsHighlightings="true">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="39" right="39" top="39" bottom="39" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Studio настольная" version="1.2.9018.0" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.11.9018.0" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="SpecialFunctions" version="1.12.9018.0" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+      <assembly name="TextRegion" version="1.11.9018.0" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+      <assembly name="X-Y Plot Region (JXCharts)" version="0.3.9043.20036" guid="c12231ec-4873-43c1-a7d0-a167ebd17066" />
+      <assembly name="Mathcad Toolbox" version="0.5.9065.32492" guid="ddc09821-49f1-4c21-a829-6499de0a8f06" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="144" top="9" width="457" height="50" color="#000000" fontSize="14">
+      <text lang="rus" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-size: 14px; text-align: center;">Движение тела, брошенного под углом к горизонту<br />с учётом сопротивления воздуха</p>
+        </content>
+      </text>
+    </region>
+    <region left="513" top="45" width="209" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">3</e>
+          <e type="function" args="1">appVersion</e>
+        </input>
+        <result action="numeric">
+          <e type="operand" style="string">1.2.9018</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="63" width="62" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">k</e>
+          <e type="operand">0.2</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="81" top="63" width="66" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">α</e>
+          <e type="operand">50</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="162" top="63" width="86" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">steps</e>
+          <e type="operand">20</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="324" top="72" width="409" height="69" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand" style="string">?</e>
+          <e type="function" args="1">rkfixed</e>
+        </input>
+        <result action="symbolic">
+          <e type="operand" style="string">rkfixed(cmd)
+rkfixed(ode,y(x),xmax)
+rkfixed(ode,y(x),xmax,steps)
+rkfixed(ics,xmin,xmax,steps,D(x,y))</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="90" width="60" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">v.0</e>
+          <e type="operand">20</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="81" top="90" width="46" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">m</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="135" top="90" width="62" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">g</e>
+          <e type="operand">9.8</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="135" width="81" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">Вариант 1</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="153" width="356" height="52" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand">u</e>
+          <e type="function" args="2">D</e>
+          <e type="operand">u</e>
+          <e type="operand">3</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">u</e>
+          <e type="operand">4</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">k</e>
+          <e type="operand">u</e>
+          <e type="operand">3</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">m</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">g</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">k</e>
+          <e type="operand">u</e>
+          <e type="operand">4</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">m</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="function" args="4">stack</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="198" width="301" height="33" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">u.0</e>
+          <e type="operand">0</e>
+          <e type="operand">0</e>
+          <e type="operand">v.0</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">v.0</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="4">stack</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="225" width="242" height="32" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">u</e>
+          <e type="operand">u.0</e>
+          <e type="operand">0</e>
+          <e type="operand">3</e>
+          <e type="operand">steps</e>
+          <e type="operand">D</e>
+          <e type="function" args="5">rkfixed</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="252" width="273" height="179" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="263" height="171" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="-0.7380917" xmax="33.66043" xtick="10" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-0.4233404" ymax="11.4321" ytick="5" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-41.48454" y2max="41.48454" y2tick="40" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Times New Roman, 9.75pt" labelfontcolor="Black" tickfont="Segoe UI Semilight, 8.25pt" tickfontcolor="Black" xlabel="x(t)" ylabel="y(t)" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">u</e>
+          <e type="operand">1</e>
+          <e type="operand">u</e>
+          <e type="function" args="1">rows</e>
+          <e type="function" args="2">range</e>
+          <e type="operand">2</e>
+          <e type="operand">3</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+          <e type="function" args="3">el</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="9" top="495" width="81" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">Вариант 2</p>
+        </content>
+      </text>
+    </region>
+    <region left="117" top="495" width="327" height="28" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand">u</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">x</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">y</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">vx</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">vy</e>
+          <e type="function" args="6">Clear</e>
+        </input>
+        <result action="symbolic">
+          <e type="operand">1</e>
+        </result>
+      </math>
+    </region>
+    <region left="324" top="522" width="107" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand">u</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">col</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="531" width="266" height="228" color="#000000" bgColor="#ffffff" fontSize="10">
+      <mathcadblock width="256" height="220" seqop="sys">
+        <input>
+          <e type="operand">u</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">x</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">y</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">vx</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">vy</e>
+          <e type="operand">4</e>
+          <e type="operand">1</e>
+          <e type="function" args="6">sys</e>
+          <e type="operand">3</e>
+          <e type="operand">steps</e>
+          <e type="function" args="3">rkfixed</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </mathcadblock>
+    </region>
+    <region left="18" top="540" width="67" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">0</e>
+          <e type="function" args="1">x</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">≡</e>
+        </input>
+      </math>
+    </region>
+    <region left="90" top="540" width="67" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">0</e>
+          <e type="function" args="1">y</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">≡</e>
+        </input>
+      </math>
+    </region>
+    <region left="279" top="540" width="273" height="179" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="263" height="171" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="-0.7380917" xmax="33.66043" xtick="10" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-0.4233404" ymax="11.4321" ytick="5" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-41.48454" y2max="41.48454" y2tick="40" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Times New Roman, 9.75pt" labelfontcolor="Black" tickfont="Segoe UI Semilight, 8.25pt" tickfontcolor="Black" xlabel="x(t)" ylabel="y(t)" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">~t</e>
+          <e type="function" args="1">x</e>
+          <e type="operand">~t</e>
+          <e type="function" args="1">y</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="18" top="567" width="142" height="31" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">0</e>
+          <e type="function" args="1">vx</e>
+          <e type="operand">v.0</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">≡</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="594" width="142" height="31" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">0</e>
+          <e type="function" args="1">vy</e>
+          <e type="operand">v.0</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">≡</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="621" width="113" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+          <e type="function" args="1">x'</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">vx</e>
+          <e type="operator" args="2">≡</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="648" width="113" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+          <e type="function" args="1">y'</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">vy</e>
+          <e type="operator" args="2">≡</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="675" width="156" height="43" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+          <e type="function" args="1">vx'</e>
+          <e type="operand">k</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">vx</e>
+          <e type="operand">m</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">≡</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="711" width="181" height="43" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+          <e type="function" args="1">vy'</e>
+          <e type="operand">g</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">k</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">vy</e>
+          <e type="operand">m</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">≡</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="1116" width="81" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">Вариант 3</p>
+        </content>
+      </text>
+    </region>
+    <region left="117" top="1116" width="327" height="28" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand">u</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">x</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">y</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">vx</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">vy</e>
+          <e type="function" args="6">Clear</e>
+        </input>
+        <result action="symbolic">
+          <e type="operand">1</e>
+        </result>
+      </math>
+    </region>
+    <region left="324" top="1143" width="107" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand">u</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">col</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="1152" width="207" height="174" color="#000000" bgColor="#ffffff" fontSize="10">
+      <mathcadblock width="197" height="166" seqop="sys">
+        <input>
+          <e type="operand">u</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">x</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">y</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operand">3</e>
+          <e type="operand">steps</e>
+          <e type="function" args="3">rkfixed</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </mathcadblock>
+    </region>
+    <region left="18" top="1161" width="67" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">0</e>
+          <e type="function" args="1">x</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">≡</e>
+        </input>
+      </math>
+    </region>
+    <region left="90" top="1161" width="67" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">0</e>
+          <e type="function" args="1">y</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">≡</e>
+        </input>
+      </math>
+    </region>
+    <region left="279" top="1161" width="273" height="179" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="263" height="171" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="-0.7380917" xmax="33.66043" xtick="10" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-0.4233404" ymax="11.4321" ytick="5" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-41.48454" y2max="41.48454" y2tick="40" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Times New Roman, 9.75pt" labelfontcolor="Black" tickfont="Segoe UI Semilight, 8.25pt" tickfontcolor="Black" xlabel="x(t)" ylabel="y(t)" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">~t</e>
+          <e type="function" args="1">x</e>
+          <e type="operand">~t</e>
+          <e type="function" args="1">y</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="18" top="1188" width="142" height="31" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">0</e>
+          <e type="function" args="1">x'</e>
+          <e type="operand">v.0</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">≡</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="1215" width="142" height="31" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">0</e>
+          <e type="function" args="1">y'</e>
+          <e type="operand">v.0</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">≡</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="1242" width="156" height="43" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+          <e type="function" args="1">x''</e>
+          <e type="operand">k</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">x'</e>
+          <e type="operand">m</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">≡</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="1278" width="181" height="43" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+          <e type="function" args="1">y''</e>
+          <e type="operand">g</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">k</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">y'</e>
+          <e type="operand">m</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">≡</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="1422" width="81" height="23" color="#000000" fontSize="10">
+      <text lang="rus" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">Вариант 4</p>
+        </content>
+      </text>
+    </region>
+    <region left="126" top="1422" width="327" height="28" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand">u</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">x</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">y</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">vx</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">vy</e>
+          <e type="function" args="6">Clear</e>
+        </input>
+        <result action="symbolic">
+          <e type="operand">1</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="1449" width="254" height="174" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">ode</e>
+          <e type="operand">0</e>
+          <e type="function" args="1">x</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">0</e>
+          <e type="function" args="1">y</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">0</e>
+          <e type="function" args="1">x'</e>
+          <e type="operand">v.0</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">0</e>
+          <e type="function" args="1">y'</e>
+          <e type="operand">v.0</e>
+          <e type="operand">α</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">x''</e>
+          <e type="operand">k</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">x'</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">m</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">y''</e>
+          <e type="operand">g</e>
+          <e type="operand">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">k</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">y'</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">m</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">6</e>
+          <e type="operand">1</e>
+          <e type="function" args="8">sys</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="1629" width="265" height="51" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">u</e>
+          <e type="operand">ode</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">x</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">y</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operand">3</e>
+          <e type="operand">steps</e>
+          <e type="function" args="4">rkfixed</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="36" top="1683" width="107" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand">u</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">col</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="1710" width="273" height="179" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="263" height="171" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="-0.7380917" xmax="33.66043" xtick="10" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-0.4233404" ymax="11.4321" ytick="5" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-41.48454" y2max="41.48454" y2tick="40" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Times New Roman, 9.75pt" labelfontcolor="Black" tickfont="Segoe UI Semilight, 8.25pt" tickfontcolor="Black" xlabel="x(t)" ylabel="y(t)" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">~t</e>
+          <e type="function" args="1">x</e>
+          <e type="operand">~t</e>
+          <e type="function" args="1">y</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">mat</e>
+        </input>
+      </xyplot>
+    </region>
+  </regions>
+</worksheet>

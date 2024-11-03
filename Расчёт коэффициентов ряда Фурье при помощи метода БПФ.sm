@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Studio настольная" version="1.2.9018.0"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="96">
+    <identity>
+      <id>86a08db9-35ed-4087-a6ac-d233d9720323</id>
+      <revision>71</revision>
+    </identity>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <mixedNumbers>false</mixedNumbers>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>0</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="false" viewMode="2" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true" hideElementsHighlightings="false">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="39" right="39" top="39" bottom="39" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Studio настольная" version="1.2.9018.0" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.11.9018.0" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="SpecialFunctions" version="1.12.9018.0" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+      <assembly name="ALGLIB® - numerical analysis library" version="1.1.9042.3102" guid="8e40b49c-3681-4332-903d-751303860e7b" />
+      <assembly name="X-Y Plot Region (JXCharts)" version="0.3.9043.20036" guid="c12231ec-4873-43c1-a7d0-a167ebd17066" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="9" top="9" width="68" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">U.o</e>
+          <e type="operand">0.5</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="90" top="9" width="46" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">M</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="144" top="9" width="66" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">T</e>
+          <e type="operand">1</e>
+          <e type="operand" style="unit">ms</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="234" top="9" width="86" height="30" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">t.max</e>
+          <e type="operand">M</e>
+          <e type="operand">T</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="405" top="9" width="225" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">4</e>
+          <e type="function" args="1">appVersion</e>
+        </input>
+        <result action="numeric">
+          <e type="operand" style="string">1.2.9018.0</e>
+        </result>
+      </math>
+    </region>
+    <region left="351" top="45" width="185" height="69" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">t</e>
+          <e type="function" args="1">s</e>
+          <e type="operand">t</e>
+          <e type="operand">m</e>
+          <e type="operand">T</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="function" args="1">u.1</e>
+          <e type="operand">m</e>
+          <e type="operand">0</e>
+          <e type="operand">M</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="function" args="4">sum</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="63" width="277" height="55" color="#000000" fontSize="10">
+      <math optimize="2" breaking="31">
+        <input>
+          <e type="operand">t</e>
+          <e type="function" args="1">u.1</e>
+          <e type="operand">0.1</e>
+          <e type="operand">T</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">t</e>
+          <e type="operator" args="2">≤</e>
+          <e type="bracket">(</e>
+          <e type="operand">t</e>
+          <e type="operand">0.4</e>
+          <e type="operand">T</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">&lt;</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">U.o</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">0.5</e>
+          <e type="operand">T</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">t</e>
+          <e type="operator" args="2">≤</e>
+          <e type="bracket">(</e>
+          <e type="operand">t</e>
+          <e type="operand">0.7</e>
+          <e type="operand">T</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">&lt;</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">U.o</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="135" width="228" height="191" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="218" height="183" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="0" xmax="1" xtick="0.25" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-0.5771615" ymax="0.6516386" ytick="0.25" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="t" ylabel="u1(t)" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand" style="unit">ms</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">u.1</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="225" top="135" width="526" height="191" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="516" height="183" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="0" xmax="3" xtick="0.25" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-0.5771615" ymax="0.6516386" ytick="0.25" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="t" ylabel="s(t)" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand" style="unit">ms</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">s</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="9" top="360" width="88" height="33" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">N</e>
+          <e type="operand">2</e>
+          <e type="operand">4</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">16</e>
+        </result>
+      </math>
+    </region>
+    <region left="144" top="360" width="60" height="41" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">Δt</e>
+          <e type="operand">T</e>
+          <e type="operand">N</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="216" top="360" width="60" height="41" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">Δf</e>
+          <e type="operand">1</e>
+          <e type="operand">T</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="297" top="360" width="179" height="38" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">u</e>
+          <e type="operand">0</e>
+          <e type="operand">N</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="function" args="2">range</e>
+          <e type="operand">Δt</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">u.1</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="414" width="143" height="26" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">xy</e>
+          <e type="operand">u</e>
+          <e type="function" args="1">al_fftc1d</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="252" top="414" width="87" height="26" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">x</e>
+          <e type="operand">xy</e>
+          <e type="function" args="1">Re</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="351" top="414" width="87" height="26" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">y</e>
+          <e type="operand">xy</e>
+          <e type="function" args="1">Im</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="459" width="122" height="41" color="#000000" bgColor="#ffffbb" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">ab</e>
+          <e type="operand">2</e>
+          <e type="operand">N</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">x</e>
+          <e type="operand">y</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="function" args="4">mat</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="189" top="459" width="73" height="41" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">ω.1</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">T</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="504" width="67" height="33" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">a</e>
+          <e type="operand">ab</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="81" top="504" width="67" height="33" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">b</e>
+          <e type="operand">ab</e>
+          <e type="operand">2</e>
+          <e type="function" args="2">el</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="162" top="504" width="478" height="69" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">t</e>
+          <e type="function" args="2">v</e>
+          <e type="operand">a</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">a</e>
+          <e type="operand">k</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">k</e>
+          <e type="operand">ω.1</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">t</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">b</e>
+          <e type="operand">k</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">k</e>
+          <e type="operand">ω.1</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">t</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">k</e>
+          <e type="operand">1</e>
+          <e type="operand">n</e>
+          <e type="function" args="4">sum</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="585" width="265" height="172" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="255" height="164" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="0" xmax="3" xtick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-0.5771615" ymax="0.6516386" ytick="0.25" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Segoe UI Semilight, 7.8pt" tickfontcolor="Black" xlabel="t" ylabel="" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="Transparent" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="s(t)" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Dash" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="v(t)" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Red" linethickness="2" linepattern="Solid" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand" style="unit">ms</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">s</e>
+          <e type="operand">1</e>
+          <e type="operand">t</e>
+          <e type="operand" style="unit">ms</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="2">v</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="243" top="585" width="265" height="172" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="255" height="164" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="0" xmax="3" xtick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-0.5771615" ymax="0.6516386" ytick="0.25" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Segoe UI Semilight, 7.8pt" tickfontcolor="Black" xlabel="t" ylabel="" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="Transparent" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="s(t)" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Dash" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="v(t)" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Red" linethickness="2" linepattern="Solid" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand" style="unit">ms</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">s</e>
+          <e type="operand">3</e>
+          <e type="operand">t</e>
+          <e type="operand" style="unit">ms</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="2">v</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="486" top="585" width="265" height="172" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="255" height="164" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="0" xmax="3" xtick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-0.5771615" ymax="0.6516386" ytick="0.25" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Segoe UI Semilight, 7.8pt" tickfontcolor="Black" xlabel="t" ylabel="" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="Transparent" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="s(t)" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Dash" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="v(t)" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Red" linethickness="2" linepattern="Solid" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand" style="unit">ms</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">s</e>
+          <e type="operand">5</e>
+          <e type="operand">t</e>
+          <e type="operand" style="unit">ms</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="2">v</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="0" top="810" width="265" height="172" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="255" height="164" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="0" xmax="3" xtick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-0.5771615" ymax="0.6516386" ytick="0.25" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Segoe UI Semilight, 7.8pt" tickfontcolor="Black" xlabel="t" ylabel="" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="Transparent" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="s(t)" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Dash" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="v(t)" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Red" linethickness="2" linepattern="Solid" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand" style="unit">ms</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">s</e>
+          <e type="operand">7</e>
+          <e type="operand">t</e>
+          <e type="operand" style="unit">ms</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="2">v</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="243" top="810" width="265" height="172" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="255" height="164" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="0" xmax="3" xtick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-0.5771615" ymax="0.6516386" ytick="0.25" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Segoe UI Semilight, 7.8pt" tickfontcolor="Black" xlabel="t" ylabel="" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="Transparent" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="s(t)" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Dash" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="v(t)" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Red" linethickness="2" linepattern="Solid" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand" style="unit">ms</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">s</e>
+          <e type="operand">9</e>
+          <e type="operand">t</e>
+          <e type="operand" style="unit">ms</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="2">v</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="486" top="810" width="265" height="172" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="255" height="164" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="0" xmax="3" xtick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-0.5771615" ymax="0.6516386" ytick="0.25" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Segoe UI Semilight, 7.8pt" tickfontcolor="Black" xlabel="t" ylabel="" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="Transparent" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="s(t)" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Dash" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="v(t)" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Red" linethickness="2" linepattern="Solid" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand" style="unit">ms</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">s</e>
+          <e type="operand">11</e>
+          <e type="operand">t</e>
+          <e type="operand" style="unit">ms</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="2">v</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+        </input>
+      </xyplot>
+    </region>
+  </regions>
+</worksheet>

@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Studio настольная" version="1.2.9018.0"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="96">
+    <identity>
+      <id>4166242a-2152-4963-ae02-870146c3351a</id>
+      <revision>189</revision>
+    </identity>
+    <metadata lang="rus">
+      <author>Вячеслав Мезенцев</author>
+    </metadata>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <mixedNumbers>false</mixedNumbers>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>0</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="false" viewMode="2" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true" hideElementsHighlightings="false">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="39" right="39" top="39" bottom="39" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Studio настольная" version="1.2.9018.0" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.11.9018.0" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="PictureRegion" version="1.10.9018.0" guid="06b5df04-393e-4be7-9107-305196fcb861" />
+      <assembly name="SpecialFunctions" version="1.12.9018.0" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+      <assembly name="ALGLIB® - numerical analysis library" version="1.1.9042.3102" guid="8e40b49c-3681-4332-903d-751303860e7b" />
+      <assembly name="X-Y Plot Region (JXCharts)" version="0.3.9043.20036" guid="c12231ec-4873-43c1-a7d0-a167ebd17066" />
+      <assembly name="Mathcad Toolbox" version="0.5.9065.32492" guid="ddc09821-49f1-4c21-a829-6499de0a8f06" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="9" top="0" width="225" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">4</e>
+          <e type="function" args="1">appVersion</e>
+        </input>
+        <result action="numeric">
+          <e type="operand" style="string">1.2.9018.0</e>
+        </result>
+      </math>
+    </region>
+    <region left="99" top="27" width="109" height="33" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">C</e>
+          <e type="operand">1.5</e>
+          <e type="operand">10</e>
+          <e type="operand">6</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="234" top="27" width="422" height="128" color="#000000">
+      <picture>
+        <raw format="png" encoding="base64">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</raw>
+      </picture>
+    </region>
+    <region left="9" top="36" width="62" height="24" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">R</e>
+          <e type="operand">100</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="63" width="99" height="39" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">I.0</e>
+          <e type="operand">1</e>
+          <e type="operand">10</e>
+          <e type="operand">5</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="99" width="198" height="45" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">u</e>
+          <e type="function" args="1">i</e>
+          <e type="operand">I.0</e>
+          <e type="operand">u</e>
+          <e type="operand">0.05</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="1">exp</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="153" width="88" height="33" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">f</e>
+          <e type="operand">15</e>
+          <e type="operand">10</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="108" top="153" width="80" height="33" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">F</e>
+          <e type="operand">1</e>
+          <e type="operand">10</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="207" top="162" width="54" height="24" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">Um</e>
+          <e type="operand">5</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="279" top="162" width="70" height="24" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">ma</e>
+          <e type="operand">0.5</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="369" top="162" width="81" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">ω</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">f</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="486" top="162" width="81" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Ω</e>
+          <e type="operand">2</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">F</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="198" width="309" height="31" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">t</e>
+          <e type="function" args="1">u.in</e>
+          <e type="operand">Um</e>
+          <e type="operand">1</e>
+          <e type="operand">ma</e>
+          <e type="operand">Ω</e>
+          <e type="operand">t</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">ω</e>
+          <e type="operand">t</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="369" top="198" width="313" height="258" color="#000000" bgColor="#ffffff" fontSize="10" showInputData="false">
+      <xyplot width="303" height="250" points="100" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="-0.2847365" xmax="0.3101453" xtick="0.1" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-0.0002338039" ymax="0.0009312509" ytick="0.0002" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="I–V curve" titlefont="Tahoma, 12pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="u, V" ylabel="i(u), A" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">u</e>
+          <e type="function" args="1">i</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="9" top="279" width="52" height="30" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">u.0</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="81" top="279" width="65" height="30" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">t.min</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="162" top="279" width="97" height="30" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">t.max</e>
+          <e type="operand">0.002</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="270" top="279" width="102" height="24" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">steps</e>
+          <e type="operand">1000</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="315" width="170" height="30" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">t</e>
+          <e type="function" args="1">Δu</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">u.in</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">u</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="189" top="315" width="125" height="26" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">start</e>
+          <e type="operand">0</e>
+          <e type="function" args="1">time</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="351" width="288" height="79" color="#000000" bgColor="#ffffff" fontSize="10">
+      <mathcadblock optimize="2" width="278" height="71" seqop="sys">
+        <input>
+          <e type="operand">u.out</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">u</e>
+          <e type="operand">t.max</e>
+          <e type="operand">steps</e>
+          <e type="function" args="3">al_rkckadapt</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </mathcadblock>
+    </region>
+    <region left="27" top="360" width="244" height="28" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">t</e>
+          <e type="function" args="1">u'</e>
+          <e type="operand">R</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">C</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">R</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">Δu</e>
+          <e type="function" args="1">i</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">t</e>
+          <e type="function" args="1">u</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">≡</e>
+        </input>
+      </math>
+    </region>
+    <region left="27" top="387" width="97" height="32" color="#000000" fontSize="10">
+      <math optimize="2">
+        <input>
+          <e type="operand">t.min</e>
+          <e type="function" args="1">u</e>
+          <e type="operand">u.0</e>
+          <e type="operator" args="2">≡</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="477" width="190" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">0</e>
+          <e type="function" args="1">time</e>
+          <e type="operand">start</e>
+          <e type="operator" args="2">-</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">s</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">9.328</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="513" width="745" height="285" color="#000000" bgColor="#ffffff" fontSize="10">
+      <xyplot width="735" height="277" points="1000" name="XYPlot">
+        <chartstyle backcolor="White" bordercolor="Black" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
+        <xaxes xmin="-8.84873E-06" xmax="0.001946616" xtick="0.0002" visible="True" decimalplaces="1" numberformat="General" />
+        <yaxes ymin="-8.563326" ymax="9.048721" ytick="5" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="Amplitude detector" titlefont="Arial, 12pt" titlefontcolor="Black" />
+        <xylabel labelfont="Times New Roman, 10.2pt, style=Italic" labelfontcolor="Black" tickfont="Segoe UI Semilight, 7.8pt" tickfontcolor="Black" xlabel="t, s" ylabel="uout(t), V" y2label="y2" />
+        <legend isbordervisible="false" islegendvisible="true" legendbackcolor="Transparent" legendbordercolor="Black" legendfont="Tahoma, 9.75pt" legendposition="South" textcolor="Black" />
+        <traces>
+          <trace seriesname="uin(t)" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="uout[t]" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Red" linethickness="1" linepattern="Solid" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">t</e>
+          <e type="function" args="1">u.in</e>
+          <e type="operand">u.out</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+        </input>
+      </xyplot>
+    </region>
+  </regions>
+</worksheet>

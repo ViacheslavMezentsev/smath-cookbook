@@ -4,7 +4,7 @@
   <settings ppi="96">
     <identity>
       <id>a1eec082-0233-4140-9334-aa3e39e27e1b</id>
-      <revision>181</revision>
+      <revision>196</revision>
     </identity>
     <metadata lang="rus">
       <author>Вячеслав Мезенцев</author>
@@ -64,7 +64,9 @@
     </region>
     <region left="0" top="117" width="631" height="26" color="#000000" fontSize="10" showInputData="false">
       <hyperlink dl="https://en.smath.com/forum/yaf_postst25461findunread_roots-function.aspx" flags="" sd="true" width="621" height="18">
-        <description active="false" position="Right" lang="eng" />
+        <description active="false" position="Right" lang="eng">
+          <content></content>
+        </description>
         <input>
           <e type="operand" style="string">https://en.smath.com/forum/yaf_postst25461findunread_roots-function.aspx</e>
         </input>
@@ -577,8 +579,8 @@
           </input>
         </math>
       </region>
-      <region left="18" top="1089" width="712" height="281" color="#000000" fontSize="10">
-        <math breaking="95">
+      <region left="9" top="1098" width="1121" height="252" color="#000000" fontSize="10">
+        <math>
           <description active="true" position="Top" lang="eng">
             <content>
               <p>XYPlot shorthands</p>
@@ -620,22 +622,21 @@
             <e type="operand">A#</e>
             <e type="function" args="1">str2num</e>
             <e type="function" args="1">z2xy</e>
-            <e type="operand">B#</e>
-            <e type="operand">8</e>
-            <e type="operand" style="string">blue</e>
-            <e type="function" args="4">augment</e>
-            <e type="function" args="1">eval</e>
             <e type="operand">A#</e>
             <e type="function" args="1">str2num</e>
             <e type="function" args="1">z2xy</e>
+            <e type="function" args="2">stack</e>
+            <e type="operand">B#</e>
+            <e type="operand">8</e>
+            <e type="operand" style="string">blue</e>
             <e type="operand">A#</e>
             <e type="operand">10</e>
             <e type="operand" style="string">blue</e>
-            <e type="function" args="4">augment</e>
-            <e type="function" args="1">eval</e>
             <e type="operand">2</e>
-            <e type="operand">1</e>
-            <e type="function" args="4">sys</e>
+            <e type="operand">3</e>
+            <e type="function" args="8">mat</e>
+            <e type="function" args="2">augment</e>
+            <e type="function" args="1">eval</e>
             <e type="operand">S#</e>
             <e type="operand" style="string">Poly</e>
             <e type="operator" args="2">≡</e>
@@ -671,6 +672,19 @@
             <e type="operand">10</e>
             <e type="operand" style="string">black</e>
             <e type="function" args="4">augment</e>
+            <e type="operand">A#</e>
+            <e type="function" args="1">str2num</e>
+            <e type="function" args="1">vectorize</e>
+            <e type="function" args="1">z2xy</e>
+            <e type="operand" style="string">.</e>
+            <e type="operand">8</e>
+            <e type="operand" style="string">#</e>
+            <e type="operand">B#</e>
+            <e type="operand">4</e>
+            <e type="function" args="2">substr</e>
+            <e type="function" args="2">concat</e>
+            <e type="function" args="4">augment</e>
+            <e type="function" args="2">stack</e>
             <e type="function" args="1">eval</e>
             <e type="operand">2</e>
             <e type="operand">1</e>
@@ -934,31 +948,27 @@
         </input>
       </math>
     </region>
-    <region left="360" top="1521" width="392" height="297" color="#000000" fontSize="8">
-      <xyplot width="382" height="289" points="20" name="XYPlot">
-        <chartstyle usedefault="false" backcolor="White" bordercolor="Black" />
+    <region left="360" top="1521" width="392" height="307" color="#000000" fontSize="8">
+      <xyplot width="382" height="299" points="20" name="XYPlot">
+        <chartstyle usedefault="false" backcolor="176, 255, 255, 255" bordercolor="Transparent" />
         <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="true" isygrid="true" isy2grid="false" />
-        <xaxes xmin="-4.212864" xmax="4.559483" xtick="2" visible="False" decimalplaces="3" numberformat="General" />
-        <yaxes ymin="-2.070266" ymax="4.882187" ytick="2" visible="False" decimalplaces="3" numberformat="General" />
+        <xaxes xmin="-4.327686" xmax="4.444661" xtick="2" visible="False" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-1.29964" ymax="5.652813" ytick="2" visible="False" decimalplaces="3" numberformat="General" />
         <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
         <title2d title="" titlefont="Arial, 10pt" titlefontcolor="Black" />
         <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="" ylabel="" y2label="" />
         <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
         <traces>
           <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Black" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
-          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Red" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
-          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Black" linethickness="1" linepattern="Dot" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
-          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Black" linethickness="1" linepattern="Dot" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
-          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Black" linethickness="1" linepattern="Dot" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="64, 64, 64" linethickness="1" linepattern="Dash" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="64, 64, 64" linethickness="1" linepattern="Dash" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="64, 64, 64" linethickness="1" linepattern="Dash" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
           <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Black" linethickness="1" linepattern="Dot" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Red" linethickness="1" linepattern="Dash" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
           <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Black" linethickness="1" linepattern="Dot" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
-          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Red" linethickness="2" linepattern="Dash" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Shapes" lineantialias="true" linecolor="Red" linethickness="2" linepattern="Dash" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
           <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Green" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
           <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="DarkRed" linethickness="2" linepattern="Dash" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
-          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Shapes" lineantialias="true" linecolor="DarkOrange" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
-          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="SaddleBrown" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
-          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Blue" linethickness="2" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
-          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Red" linethickness="1" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
           <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="2" linepattern="Solid" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
         </traces>
         <input>
@@ -966,7 +976,7 @@
         </input>
       </xyplot>
     </region>
-    <region left="405" top="1845" width="157" height="24" color="#000000" bgColor="#80ff80" fontSize="10">
+    <region left="405" top="1854" width="157" height="24" color="#000000" bgColor="#80ff80" fontSize="10">
       <math>
         <input>
           <e type="operand">A</e>
@@ -980,7 +990,7 @@
         </result>
       </math>
     </region>
-    <region left="594" top="1845" width="77" height="26" color="#000000" fontSize="10">
+    <region left="594" top="1854" width="77" height="26" color="#000000" fontSize="10">
       <math>
         <input>
           <e type="operand">A</e>
@@ -993,7 +1003,7 @@
         </result>
       </math>
     </region>
-    <region left="405" top="1872" width="113" height="24" color="#000000" fontSize="10">
+    <region left="405" top="1881" width="113" height="24" color="#000000" fontSize="10">
       <math>
         <input>
           <e type="operand">F</e>
@@ -1006,7 +1016,7 @@
         </result>
       </math>
     </region>
-    <region left="594" top="1872" width="84" height="24" color="#000000" fontSize="10">
+    <region left="594" top="1881" width="84" height="24" color="#000000" fontSize="10">
       <math>
         <input>
           <e type="operand">D</e>

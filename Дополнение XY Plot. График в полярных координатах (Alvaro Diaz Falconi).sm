@@ -1,0 +1,749 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Solver" version="1.3.0.9126"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="144">
+    <identity>
+      <id>468632a3-bb29-4c68-bb91-980c8136256f</id>
+      <revision>193</revision>
+    </identity>
+    <metadata lang="rus">
+      <author>Вячеслав Мезенцев</author>
+    </metadata>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <mixedNumbers>false</mixedNumbers>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>3</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="false" viewMode="2" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true" hideElementsHighlightings="false">
+      <paper id="9" orientation="Portrait" width="827" height="1169" />
+      <margins left="39" right="39" top="39" bottom="39" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Core" version="1.73.9126.0" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.73.9126.0" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="PictureRegion" version="1.73.9126.0" guid="06b5df04-393e-4be7-9107-305196fcb861" />
+      <assembly name="CustomFunctions" version="1.2.9201.29023" guid="18dadffd-79a3-4cf9-aee1-d66deb0ea720" />
+      <assembly name="SpecialFunctions" version="1.73.9126.0" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+      <assembly name="TextRegion" version="1.73.9126.0" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+      <assembly name="X-Y Plot Region (JXCharts)" version="0.3.9338.42619" guid="c12231ec-4873-43c1-a7d0-a167ebd17066" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="135" top="9" width="430" height="29" color="#000000" fontSize="14" isBreakable="false">
+      <text lang="rus" fontFamily="Arial" fontSize="10">
+        <content>
+          <p style="font-size: 14px; text-align: center;">Отображение графика в полярных координатах</p>
+        </content>
+      </text>
+    </region>
+    <region left="558" top="45" width="73" height="24" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Consolas" fontSize="10">
+        <content>
+          <p>Notation</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="63" width="233" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">4</e>
+          <e type="function" args="1">appVersion</e>
+        </input>
+        <result action="numeric">
+          <e type="operand" style="string">1.73.9126.0</e>
+        </result>
+      </math>
+    </region>
+    <region left="558" top="72" width="189" height="89" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">a</e>
+          <e type="function" args="1">stack</e>
+          <e type="function" args="1">length</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">ρ.max</e>
+          <e type="operand">a</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">ρ.tick</e>
+          <e type="operand">b</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="function" args="4">mat</e>
+          <e type="operand">φ</e>
+          <e type="operand">a</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">ρ</e>
+          <e type="operand">b</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="function" args="4">mat</e>
+          <e type="function" args="3">if</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="99" width="647" height="346" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">a</e>
+          <e type="operand">b</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">a</e>
+          <e type="function" args="1">stack</e>
+          <e type="function" args="1">length</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">≡</e>
+          <e type="operand">f</e>
+          <e type="operand">z</e>
+          <e type="operand">clr</e>
+          <e type="function" args="3">F</e>
+          <e type="operand">f</e>
+          <e type="operand">z</e>
+          <e type="function" args="1">transpose</e>
+          <e type="operand">clr</e>
+          <e type="operand" style="string">solid</e>
+          <e type="operand">1</e>
+          <e type="operand">1</e>
+          <e type="operand">5</e>
+          <e type="function" args="7">mat</e>
+          <e type="function" args="1">transpose</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">g</e>
+          <e type="operand">0</e>
+          <e type="operand">330</e>
+          <e type="operand">30</e>
+          <e type="function" args="3">range</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">g°</e>
+          <e type="operand">g</e>
+          <e type="function" args="1">num2str</e>
+          <e type="operand" style="string">°</e>
+          <e type="function" args="2">concat</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">Ρ</e>
+          <e type="operand">0</e>
+          <e type="operand">a</e>
+          <e type="operand">b</e>
+          <e type="function" args="3">range</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">1</e>
+          <e type="operand">3</e>
+          <e type="function" args="5">mat</e>
+          <e type="operand">X</e>
+          <e type="operand">Y</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="function" args="4">mat</e>
+          <e type="operand">a</e>
+          <e type="operand">g</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">cos</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="operand">g</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="function" args="4">mat</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">k</e>
+          <e type="operand">1</e>
+          <e type="operand">a</e>
+          <e type="operand">b</e>
+          <e type="operator" args="2">/</e>
+          <e type="function" args="2">range</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">C</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">C</e>
+          <e type="operand">k</e>
+          <e type="function" args="2">el</e>
+          <e type="operand" style="string">circle</e>
+          <e type="operand">0</e>
+          <e type="operand">0</e>
+          <e type="operand">k</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="bracket">(</e>
+          <e type="operand">b</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">1</e>
+          <e type="operand">3</e>
+          <e type="function" args="5">mat</e>
+          <e type="operand" style="string">gray</e>
+          <e type="function" args="3">F</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">1</e>
+          <e type="operand">3</e>
+          <e type="function" args="5">mat</e>
+          <e type="operand">k</e>
+          <e type="operand">1</e>
+          <e type="operand">g</e>
+          <e type="function" args="1">length</e>
+          <e type="function" args="2">range</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">L</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">L</e>
+          <e type="operand">k</e>
+          <e type="function" args="2">el</e>
+          <e type="operand" style="string">line</e>
+          <e type="operand">0</e>
+          <e type="operand">0</e>
+          <e type="operand">X</e>
+          <e type="operand">k</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">Y</e>
+          <e type="operand">k</e>
+          <e type="function" args="2">el</e>
+          <e type="operand">1</e>
+          <e type="operand">4</e>
+          <e type="function" args="6">mat</e>
+          <e type="operand" style="string">gray</e>
+          <e type="function" args="3">F</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">1</e>
+          <e type="operand">3</e>
+          <e type="function" args="5">mat</e>
+          <e type="operand">G</e>
+          <e type="operand">X</e>
+          <e type="operand">0.25</e>
+          <e type="operand">a</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">g</e>
+          <e type="operand">90</e>
+          <e type="operand">270</e>
+          <e type="function" args="3">ltlt</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">Y</e>
+          <e type="operand">0.15</e>
+          <e type="operand">a</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">g</e>
+          <e type="operand">0</e>
+          <e type="operand">180</e>
+          <e type="function" args="3">lele</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">g°</e>
+          <e type="function" args="3">augment</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">L</e>
+          <e type="operand">C</e>
+          <e type="operand" style="string">circle</e>
+          <e type="operand">0</e>
+          <e type="operand">0</e>
+          <e type="operand">a</e>
+          <e type="operand">1</e>
+          <e type="operand">3</e>
+          <e type="function" args="5">mat</e>
+          <e type="operand" style="string">black</e>
+          <e type="function" args="3">F</e>
+          <e type="operand">1</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">mat</e>
+          <e type="function" args="3">stack</e>
+          <e type="operand">1</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">mat</e>
+          <e type="operand">G</e>
+          <e type="operand">0</e>
+          <e type="operand">Ρ</e>
+          <e type="operand">Ρ</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">var2str</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="function" args="3">augment</e>
+          <e type="function" args="2">stack</e>
+          <e type="operand">9</e>
+          <e type="function" args="2">augment</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operand">7</e>
+          <e type="operand">1</e>
+          <e type="function" args="9">line</e>
+          <e type="operand">b</e>
+          <e type="operand">a</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="operand">b</e>
+          <e type="operand">a</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="function" args="2">augment</e>
+          <e type="function" args="3">if</e>
+          <e type="operand">1</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">line</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="135" width="111" height="111" color="#000000">
+      <picture>
+        <raw format="png" encoding="base64">iVBORw0KGgoAAAANSUhEUgAAAGcAAABnCAYAAAAdQVz5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAACkfSURBVHhe7d0FtG5V1Tfwe7lw6e4SlG4EFEFRTBpEEEEaE1QsRAwEDCzCDmwUECQUVEJADMAu7ABb7AYL9zd+697/88677z7nOefC+318YzDHmGM/Z/Vac81ca+8zo7sH7rYwo59wD9x9YB7i/Pe//23P//znP3cJps2065m8O+64Y9ppaUdav6+huhXrGCYrN4T9uvX30FgWBIf6uIdz7sYwyDnf/OY3u+uvv7674YYb2nNB8Ctf+cqozbR7++23j/J/9atfjdLSzy9/+cuW9o9//KO78cYbW9ovfvGLlmaHhjt+/OMftzz1UvenP/1py/vXv/7Vfe5zn5tnLNqSnvGkvS984QvzjXsIjbHWrb9/85vfjMbSrzcd/POf/zxfH/MQJxN44AMf2M2YMeNO4VprrdXasgj//Oc/u3//+9/dd77znVH+m970ppb//e9/f5T22te+tpX74Q9/OEp71ate1cppA4JnPetZ8/X3/Oc/v9W99dZbu4UWWmi+/N/+9retLhECbIBllllmvnJD+KMf/ajV0X4wa/We97xnvvILgp/+9KdHfQTmIU4yHvWoR7UJDk1yKqjexhtv3NrKbgd22cILL9zyzzrrrJaGEIsuumhLe9e73tXS/vjHP3ZLLLFESzvzzDNbmsXIgpxwwgktb/bs2Q39fvWrX93yLP7yyy/f0mbNmtWeSy65ZPe73/2u5Wc8iLP44ovPN/aMv/4d4lRIO+ecc85oLP12poJZD9wDsnnAhMRRcdNNN+0+/vGPdx/96Ee7yy67bEKUf+mll7ayO++8c6u7ySabtLawKY7YY489ukc84hGjxXzb297WBoJzMkD97brrrq2NRRZZpLVzxhlntHYmIs7MmTNbuQ022KD18chHPrK1VxdgscUW637961+3/rSR59VXXz3P/D7ykY90K6+8cquz++67t7QPf/jDbbOoc/nll7fx7bbbbk20grPPPruVNw5z0l5/fYZQuZe+9KWjMU6ZOLvsskursNNOO9XsKcFhhx3W6m622WajNItWFwu+4x3vaHk///nP58uDdr1nJc5kYm0yxCHRG+PgPve5T6tz3HHH9bPmEWE33XRTS3vf+943Sovemyp86lOfGtWdMnHCOTvssENLsyjf+ta3mmKlbD0rfu1rX2uTV/Zxj3tcq4sLAM45+eSTu+23377bcccdu/vf//7ddttt1xadQv7Yxz7WbbPNNi1t1VVXbUSB2f2VOBnfG97whlZ+2223HRGRjtNHTQsSm5/4xCdaf5///Ofb84tf/GJ32223tTZ/9rOfjQyQ1VZbrdV5zGMe09I+85nPNGWvzkte8pLR2L797W+3sYRz4Ne//vXWHmNnorWCv//971s50mbaxAnnWMzAwx72sHkmXHG99dYblTvooINaWjin6pwKRx11VCu3xhprjNKe8YxntDSTD3FOP/30lhejIqIN2BDLLrtsK/fyl7+8pf31r3/tVlhhhVEbsE+sYHb6a17zmvnyxuEQcWxS8IEPfGC+8hU/+9nPtnJ3CXHsfqKJnKcLPGF0xRZbbDEyAccRx4IawJOe9KRWF2HtYGlPfepTW90hzqlWDFCekg9xYtUhXn8xgn1F/5Of/KTVYXRMV6kPEQfngA9+8IOj9rJWdb1wD6B7UneBiQMoSGl1F2aym2+++ahcnziIZvJ77713W3x9SEMc5ch4XCHtmGOOGU2qzzlM4QMPPLDbd999uwsvvLCVZ/0tvfTSrQ4DRB/yLc5FF13Uynmed955IwtO/sUXX9zy/vKXv7S2X//614/6zfysAWNAfej3scce28opM444/u4bJlmvuw1xwP7779/S6JR0XonDrAURdbWf0047reURQcl74Qtf2NLI9qRVHIJw2Ite9KJRWsaij36/RGwfqrjiqINqEPx/Rxw7/Mgjj2z17O700eccQG9sueWWTUz2OYcpzDlmPLz73e9uaRQrA0Od1VdfvfWBk6677rruS1/6UlP6nhT6gx70oFaOsyqNgidOgUWXd9/73reZ3fo1PmNVJsYODlJuq622av4Z+H/OORZ4r732ap2xfKJoI34MdiKdE+IoNxFxasgCIMRSSy3V6lQndDI45ZRTWntDyp+e/MMf/tDK8bmkGTsrTbu1/3XWWaflH3300e3vifrNIlZuCnHOP//8NnaEzlrV9bpLiQPsvP6kgwnVgD5xwH777dfSVllllUGx1icOXZC2X/GKV7Q03JX4Wsp7EonSXvziF7fyJs8hjHMa5E8px6xPWvV95CHEve51r5ZH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</raw>
+      </picture>
+    </region>
+    <region left="0" top="261" width="154" height="56" color="#000000" fontSize="10">
+      <text lang="eng" width="154" fontFamily="Consolas" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">ToDo: Improve G, <br />using the font size<br />and plot zoom.</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="477" width="273" height="280" color="#000000" fontSize="8">
+      <xyplot width="263" height="272" points="100" name="XYPlot">
+        <chartstyle usedefault="false" backcolor="Transparent" bordercolor="Transparent" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="false" isygrid="false" isy2grid="false" />
+        <xaxes xmin="-2.901901" xmax="2.858099" xtick="2" visible="False" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-2.88" ymax="2.88" ytick="2" visible="False" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="r = 1 + cos(φ)" titlefont="Tahoma, 9.75pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="x" ylabel="y" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Shapes" lineantialias="true" linecolor="Blue" linethickness="8" linepattern="Solid" filled="true" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="WideUpwardDiagonal" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Black" linethickness="1" linepattern="Solid" filled="false" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="255, 128, 0" linethickness="2" linepattern="Solid" filled="false" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">2</e>
+          <e type="operand">0.5</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">φ</e>
+          <e type="operand">0</e>
+          <e type="operand">359</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">range</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">1</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operand">1</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">line</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="324" top="477" width="272" height="286" color="#000000" fontSize="8">
+      <xyplot width="262" height="278" points="100" name="XYPlot">
+        <chartstyle usedefault="false" backcolor="Transparent" bordercolor="Transparent" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="false" isygrid="false" isy2grid="false" />
+        <xaxes xmin="-13.27883" xmax="15.52117" xtick="10" visible="False" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-15.65832" ymax="13.14168" ytick="10" visible="False" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="r = 2 - φ" titlefont="Tahoma, 9.75pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="x" ylabel="y" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Shapes" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" filled="true" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="ZigZag" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Black" linethickness="1" linepattern="Solid" filled="false" hatched="false" fillcolor="White" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="255, 128, 0" linethickness="2" linepattern="Solid" filled="false" hatched="false" fillcolor="64, 0, 128, 0" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <description active="false" position="Top" lang="eng">
+          <content></content>
+        </description>
+        <input>
+          <e type="operand">10</e>
+          <e type="operand">2</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">φ</e>
+          <e type="operand">360</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">110</e>
+          <e type="operand">359</e>
+          <e type="operator" args="1">-</e>
+          <e type="function" args="3">range</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">2</e>
+          <e type="operand">φ</e>
+          <e type="operator" args="2">-</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operand">1</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">line</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="9" top="810" width="241" height="212" color="#000000" fontSize="8">
+      <xyplot width="231" height="204" points="100" name="XYPlot">
+        <chartstyle usedefault="false" backcolor="Transparent" bordercolor="Transparent" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="false" isygrid="false" isy2grid="false" />
+        <xaxes xmin="-2.000451" xmax="0.5965519" xtick="1" visible="False" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-0.2777801" ymax="1.886389" ytick="1" visible="False" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="r = - cos(φ) + sin(φ)" titlefont="Tahoma, 9.75pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="x" ylabel="y" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Shapes" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" filled="true" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Black" linethickness="1" linepattern="Solid" filled="false" hatched="false" fillcolor="0, 0, 0, 0" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="255, 128, 0" linethickness="2" linepattern="Solid" filled="false" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">1.5</e>
+          <e type="operand">0.5</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">φ</e>
+          <e type="operand">0</e>
+          <e type="operand">179</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">range</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">+</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operand">1</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">line</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="333" top="810" width="210" height="218" color="#000000" fontSize="8">
+      <xyplot width="200" height="210" points="100" name="XYPlot">
+        <chartstyle usedefault="false" backcolor="Transparent" bordercolor="Transparent" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="false" isygrid="false" isy2grid="false" />
+        <xaxes xmin="-1.95" xmax="0.45" xtick="1" visible="False" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-1.87857" ymax="0.521431" ytick="1" visible="False" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="r = - cos(φ) - sin(φ)" titlefont="Tahoma, 9.75pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="x" ylabel="y" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Shapes" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" filled="true" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Black" linethickness="1" linepattern="Solid" filled="false" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="255, 128, 0" linethickness="2" linepattern="Solid" filled="false" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">1.5</e>
+          <e type="operand">0.5</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">φ</e>
+          <e type="operand">0</e>
+          <e type="operand">179</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">range</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="1">-</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">-</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operand">1</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">line</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="567" top="819" width="161" height="40" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="Consolas" fontSize="10">
+        <content>
+          <p>Note: original have different ranges:</p>
+        </content>
+      </text>
+    </region>
+    <region left="567" top="864" width="157" height="43" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">φ.3</e>
+          <e type="operand">3</e>
+          <e type="operand">4</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">7</e>
+          <e type="operand">4</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">0.76</e>
+          <e type="function" args="3">range</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="567" top="909" width="157" height="43" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">φ.4</e>
+          <e type="operand">5</e>
+          <e type="operand">4</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">9</e>
+          <e type="operand">4</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">1.26</e>
+          <e type="function" args="3">range</e>
+          <e type="operand">π</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="1098" width="366" height="381" color="#000000" fontSize="8">
+      <xyplot width="356" height="373" points="100" name="XYPlot">
+        <chartstyle usedefault="false" backcolor="Transparent" bordercolor="Transparent" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="false" isygrid="false" isy2grid="false" />
+        <xaxes xmin="-1.424453" xmax="1.406703" xtick="1" visible="False" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-1.415578" ymax="1.415578" ytick="1" visible="False" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="r = | sin( 2∙φ ) |" titlefont="Tahoma, 9.75pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="x" ylabel="y" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Shapes" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" filled="true" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Black" linethickness="1" linepattern="Solid" filled="false" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="255, 128, 0" linethickness="2" linepattern="Solid" filled="true" hatched="false" fillcolor="92, 255, 192, 128" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">1</e>
+          <e type="operand">0.2</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">φ</e>
+          <e type="operand">0</e>
+          <e type="operand">359</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">range</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">2</e>
+          <e type="operand">φ</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="function" args="1">abs</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operand">1</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">line</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="369" top="1098" width="369" height="391" color="#000000" fontSize="8">
+      <xyplot width="359" height="383" points="100" name="XYPlot">
+        <chartstyle usedefault="false" backcolor="Transparent" bordercolor="Transparent" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="false" isygrid="false" isy2grid="false" />
+        <xaxes xmin="-1.338541" xmax="1.320791" xtick="0.5" visible="False" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-1.329666" ymax="1.329666" ytick="0.5" visible="False" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="r = sin( 3∙φ )" titlefont="Tahoma, 9.75pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="x" ylabel="y" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Shapes" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" filled="true" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Black" linethickness="1" linepattern="Solid" filled="false" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="DarkOrange" linethickness="2" linepattern="Solid" filled="true" hatched="false" fillcolor="92, 255, 192, 128" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">1</e>
+          <e type="operand">0.2</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">φ</e>
+          <e type="operand">0</e>
+          <e type="operand">180</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">range</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">3</e>
+          <e type="operand">φ</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operand">1</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">line</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="9" top="1548" width="362" height="375" color="#000000" fontSize="8">
+      <xyplot width="352" height="367" points="100" name="XYPlot">
+        <chartstyle usedefault="false" backcolor="Transparent" bordercolor="Transparent" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="false" isygrid="false" isy2grid="false" />
+        <xaxes xmin="-13.49086" xmax="11.75201" xtick="5" visible="False" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-12.41509" ymax="12.82779" ytick="5" visible="False" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="r = 1 + 7∙cos(5∙ϕ) + 4∙sin²(5∙ϕ) + 3∙sin⁴(5∙ϕ)" titlefont="Tahoma, 9.75pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="x" ylabel="y" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Shapes" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" filled="true" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Black" linethickness="1" linepattern="Solid" filled="false" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Salmon" linethickness="2" linepattern="Solid" filled="true" hatched="false" fillcolor="92, 255, 192, 128" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">φ</e>
+          <e type="function" args="1">r.7</e>
+          <e type="operand">1</e>
+          <e type="operand">7</e>
+          <e type="operand">5</e>
+          <e type="operand">φ</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">4</e>
+          <e type="operand">5</e>
+          <e type="operand">φ</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="bracket">(</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">3</e>
+          <e type="operand">5</e>
+          <e type="operand">φ</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="bracket">(</e>
+          <e type="operand">4</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">10</e>
+          <e type="operand">2</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">φ</e>
+          <e type="operand">0</e>
+          <e type="operand">359</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">range</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">r.7</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">line</e>
+        </input>
+      </xyplot>
+    </region>
+    <region left="369" top="1548" width="389" height="364" color="#000000" fontSize="8">
+      <xyplot width="379" height="356" points="100" name="XYPlot">
+        <chartstyle usedefault="false" backcolor="Transparent" bordercolor="Transparent" />
+        <grid gridcolor="LightGray" gridpattern="Dash" gridthickness="1" isxgrid="false" isygrid="false" isy2grid="false" />
+        <xaxes xmin="-5.383749" xmax="5.379169" xtick="2" visible="False" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-4.949225" ymax="5.049581" ytick="2" visible="False" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="false" y2min="-1" y2max="1" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <title2d title="r = 2 − ½∙sin(50∙ϕ) + cos(7∙ϕ)" titlefont="Tahoma, 9.75pt" titlefontcolor="Black" />
+        <xylabel labelfont="Arial, 10pt" labelfontcolor="Black" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="x" ylabel="y" y2label="y2" />
+        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <traces>
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Shapes" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" filled="true" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Labels" lineantialias="true" linecolor="Black" linethickness="1" linepattern="Solid" filled="false" hatched="false" fillcolor="64, 0, 0, 255" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Salmon" linethickness="2" linepattern="Solid" filled="true" hatched="false" fillcolor="92, 255, 192, 128" hatchstyle="Percent20" symbolantialias="true" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+        </traces>
+        <input>
+          <e type="operand">φ</e>
+          <e type="function" args="1">r.8</e>
+          <e type="operand">2</e>
+          <e type="operand">0.5</e>
+          <e type="operand">50</e>
+          <e type="operand">φ</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">sin</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">7</e>
+          <e type="operand">φ</e>
+          <e type="operator" args="2">*</e>
+          <e type="function" args="1">cos</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">4</e>
+          <e type="operand">1</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">φ</e>
+          <e type="operand">0</e>
+          <e type="operand">359</e>
+          <e type="operand">1</e>
+          <e type="function" args="3">range</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+          <e type="operand">φ</e>
+          <e type="function" args="1">r.8</e>
+          <e type="function" args="1">vectorize</e>
+          <e type="function" args="2">XYPolar</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">sys</e>
+          <e type="operand">2</e>
+          <e type="operand">1</e>
+          <e type="function" args="4">line</e>
+        </input>
+      </xyplot>
+    </region>
+  </regions>
+</worksheet>

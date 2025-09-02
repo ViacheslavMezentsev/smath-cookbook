@@ -4,7 +4,7 @@
   <settings ppi="144">
     <identity>
       <id>468632a3-bb29-4c68-bb91-980c8136256f</id>
-      <revision>193</revision>
+      <revision>194</revision>
     </identity>
     <metadata lang="rus">
       <author>Вячеслав Мезенцев</author>
@@ -33,7 +33,7 @@
       <assembly name="CustomFunctions" version="1.2.9201.29023" guid="18dadffd-79a3-4cf9-aee1-d66deb0ea720" />
       <assembly name="SpecialFunctions" version="1.73.9126.0" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
       <assembly name="TextRegion" version="1.73.9126.0" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
-      <assembly name="X-Y Plot Region (JXCharts)" version="0.3.9338.42619" guid="c12231ec-4873-43c1-a7d0-a167ebd17066" />
+      <assembly name="X-Y Plot Region (JXCharts)" version="0.3.9339.16932" guid="c12231ec-4873-43c1-a7d0-a167ebd17066" />
     </dependencies>
   </settings>
   <regions type="content">

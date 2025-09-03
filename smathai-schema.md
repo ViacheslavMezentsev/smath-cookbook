@@ -14,7 +14,7 @@
 - **Никаких предположений:** не изобретай, не предполагай и не используй какие-либо функции (например, str(), concat() и т.д.), которые не перечислены в списке стандартных функций. Если возможность не описана, она считается недоступной.
 - **Строгое соблюдение:** используй только те функции, синтаксис и структуры, которые явно определены в описании синтаксиса (SMathAI.md) и этом документе.
 
-## Генерация идентификатора документа (<id>)
+## Генерация идентификатора документа (`<id>`)
 
 - При каждом запросе на создание нового документа SMath Studio ты обязан сгенерировать новый, уникальный идентификатор в формате GUID (версия 4).
 - Этот сгенерированный GUID должен быть вставлен в тег `<id>` внутри секции `<settings><identity>...</identity></settings>`.
@@ -322,27 +322,196 @@ XSD определяет корневой элемент `worksheet` и его �
 ### 3.4. Секция `xyplot`
 
 ```xml
+<xs:complexType name="ChartStyleType">
+  <xs:attribute name="usedefault" type="xs:boolean" use="optional"/>
+  <xs:attribute name="backcolor" type="xs:string" use="optional"/>
+  <xs:attribute name="bordercolor" type="xs:string" use="optional"/>
+</xs:complexType>
+
+<!-- Базовый тип для осей -->
+<xs:complexType name="AxisBaseType">
+  <xs:attribute name="visible" type="xs:boolean" use="optional"/>
+  <xs:attribute name="decimalplaces" type="xs:int" use="optional"/>
+  <xs:attribute name="numberformat" type="NumberFormatEnum" use="optional"/>
+</xs:complexType>
+
+<!-- Конкретные оси -->
+<xs:complexType name="XAxisType">
+  <xs:complexContent>
+    <xs:extension base="AxisBaseType">
+      <xs:attribute name="xmin" type="xs:float" use="optional"/>
+      <xs:attribute name="xmax" type="xs:float" use="optional"/>
+      <xs:attribute name="xtick" type="xs:float" use="optional"/>
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="YAxisType">
+  <xs:complexContent>
+    <xs:extension base="AxisBaseType">
+      <xs:attribute name="ymin" type="xs:float" use="optional"/>
+      <xs:attribute name="ymax" type="xs:float" use="optional"/>
+      <xs:attribute name="ytick" type="xs:float" use="optional"/>
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="Y2AxisType">
+  <xs:complexContent>
+    <xs:extension base="AxisBaseType">
+      <xs:attribute name="isy2axis" type="xs:boolean" use="optional"/>
+      <xs:attribute name="y2min" type="xs:float" use="optional"/>
+      <xs:attribute name="y2max" type="xs:float" use="optional"/>
+      <xs:attribute name="y2tick" type="xs:float" use="optional"/>
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="GridType">
+  <xs:attribute name="gridcolor" type="xs:string" use="optional"/>
+  <xs:attribute name="gridpattern" type="LinePatternEnum" use="optional"/>
+  <xs:attribute name="gridthickness" type="xs:float" use="optional"/>
+  <xs:attribute name="isxgrid" type="xs:boolean" use="optional"/>
+  <xs:attribute name="isygrid" type="xs:boolean" use="optional"/>
+  <xs:attribute name="isy2grid" type="xs:boolean" use="optional"/>
+</xs:complexType>
+
+<xs:complexType name="Title2DType">
+  <xs:attribute name="title" type="xs:string" use="optional"/>
+  <xs:attribute name="titlefont" type="xs:string" use="optional"/>
+  <xs:attribute name="titlefontcolor" type="xs:string" use="optional"/>
+</xs:complexType>
+
+<xs:complexType name="XYLabelType">
+  <xs:attribute name="labelfont" type="xs:string" use="optional"/>
+  <xs:attribute name="labelfontcolor" type="xs:string" use="optional"/>
+  <xs:attribute name="tickfont" type="xs:string" use="optional"/>
+  <xs:attribute name="tickfontcolor" type="xs:string" use="optional"/>
+  <xs:attribute name="xlabel" type="xs:string" use="optional"/>
+  <xs:attribute name="ylabel" type="xs:string" use="optional"/>
+  <xs:attribute name="y2label" type="xs:string" use="optional"/>
+</xs:complexType>
+
+<xs:complexType name="LegendType">
+  <xs:attribute name="isbordervisible" type="xs:boolean" use="optional"/>
+  <xs:attribute name="islegendvisible" type="xs:boolean" use="optional"/>
+  <xs:attribute name="legendbackcolor" type="xs:string" use="optional"/>
+  <xs:attribute name="legendbordercolor" type="xs:string" use="optional"/>
+  <xs:attribute name="legendfont" type="xs:string" use="optional"/>
+  <xs:attribute name="legendposition" type="LegendPositionEnum" use="optional"/>
+  <xs:attribute name="textcolor" type="xs:string" use="optional"/>
+</xs:complexType>
+
+<!-- Перечисления -->
+<xs:simpleType name="PlotMethodEnum">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Lines"/>
+    <xs:enumeration value="Splines"/>
+    <xs:enumeration value="Labels"/>
+    <xs:enumeration value="Shapes"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="LinePatternEnum">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Solid"/>
+    <xs:enumeration value="Dash"/>
+    <xs:enumeration value="Dot"/>
+    <xs:enumeration value="DashDot"/>
+    <xs:enumeration value="DashDotDot"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="LegendPositionEnum">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="NorthWest"/>
+    <xs:enumeration value="NorthEast"/>
+    <xs:enumeration value="SouthWest"/>
+    <xs:enumeration value="SouthEast"/>
+    <xs:enumeration value="Center"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="HatchStyleEnum">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Horizontal"/>
+    <xs:enumeration value="Vertical"/>
+    <xs:enumeration value="ForwardDiagonal"/>
+    <xs:enumeration value="BackwardDiagonal"/>
+    <xs:enumeration value="Cross"/>
+    <xs:enumeration value="DiagonalCross"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="SymbolTypeEnum">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="None"/>
+    <xs:enumeration value="Circle"/>
+    <xs:enumeration value="Square"/>
+    <xs:enumeration value="Triangle"/>
+    <xs:enumeration value="Diamond"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="NumberFormatEnum">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="General"/>
+    <xs:enumeration value="Fixed"/>
+    <xs:enumeration value="Scientific"/>
+    <xs:enumeration value="Engineering"/>
+    <xs:enumeration value="Currency"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<!-- Trace -->
+<xs:complexType name="TraceType">
+  <xs:attribute name="seriesname" type="xs:string" use="optional"/>
+  <xs:attribute name="isy2data" type="xs:boolean" use="optional"/>
+  <xs:attribute name="isvisible" type="xs:boolean" use="optional"/>
+  <xs:attribute name="plotmethod" type="PlotMethodEnum" use="optional"/>
+  <xs:attribute name="lineantialias" type="xs:boolean" use="optional"/>
+  <xs:attribute name="linecolor" type="xs:string" use="optional"/>
+  <xs:attribute name="linethickness" type="xs:float" use="optional"/>
+  <xs:attribute name="linepattern" type="LinePatternEnum" use="optional"/>
+  <xs:attribute name="fillmode" type="xs:string" use="optional"/>
+  <xs:attribute name="filltotrace" type="xs:int" use="optional"/>
+  <xs:attribute name="filled" type="xs:boolean" use="optional"/>
+  <xs:attribute name="hatched" type="xs:boolean" use="optional"/>
+  <xs:attribute name="fillcolor" type="xs:string" use="optional"/>
+  <xs:attribute name="hatchstyle" type="HatchStyleEnum" use="optional"/>
+  <xs:attribute name="symbolantialias" type="xs:boolean" use="optional"/>
+  <xs:attribute name="symbolsize" type="xs:int" use="optional"/>
+  <xs:attribute name="symboltype" type="SymbolTypeEnum" use="optional"/>
+  <xs:attribute name="symbolborderthickness" type="xs:int" use="optional"/>
+  <xs:attribute name="symbolbordercolor" type="xs:string" use="optional"/>
+  <xs:attribute name="symbolfillcolor" type="xs:string" use="optional"/>
+</xs:complexType>
+
+<!-- Основной тип XYPlot -->
 <xs:complexType name="XyplotRegionType">
   <xs:sequence>
-    <!-- Вспомогательные элементы настройки, могут быть пустыми -->
-    <xs:element name="propertiessource" minOccurs="0"/>
-    <xs:element name="chartstyle" minOccurs="0"/>
-    <xs:element name="grid" minOccurs="0"/>
-    <xs:element name="xaxes" minOccurs="0"/>
-    <xs:element name="yaxes" minOccurs="0"/>
-    <xs:element name="y2axes" minOccurs="0"/>
-    <xs:element name="title2d" minOccurs="0"/>
-    <xs:element name="xylabel" minOccurs="0"/>
-    <xs:element name="legend" minOccurs="0"/>
+    <xs:element name="chartstyle" type="ChartStyleType" minOccurs="0"/>
+    <xs:element name="grid" type="GridType" minOccurs="0"/>
+    <xs:element name="xaxes" type="XAxisType" minOccurs="0"/>
+    <xs:element name="yaxes" type="YAxisType" minOccurs="0"/>
+    <xs:element name="y2axes" type="Y2AxisType" minOccurs="0"/>
+    <xs:element name="title2d" type="Title2DType" minOccurs="0"/>
+    <xs:element name="xylabel" type="XYLabelType" minOccurs="0"/>
+    <xs:element name="legend" type="LegendType" minOccurs="0"/>
     <xs:element name="traces" minOccurs="0">
       <xs:complexType>
         <xs:sequence>
-          <xs:element name="trace" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="trace" type="TraceType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:complexType>
     </xs:element>
     <xs:element name="input" type="RpnExpressionType"/>
   </xs:sequence>
+
+  <!-- Атрибуты xyplot -->
+  <xs:attribute name="animFrameRate" type="xs:int" use="optional"/>
+  <xs:attribute name="animPlaybackMode" type="xs:string" use="optional"/>
+  <xs:attribute name="keepAspectRatio" type="xs:boolean" use="optional"/>
   <xs:attribute name="width" type="xs:int" use="required"/>
   <xs:attribute name="height" type="xs:int" use="required"/>
   <xs:attribute name="points" type="xs:int" use="required"/>
